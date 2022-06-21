@@ -38,7 +38,7 @@ const customerController = {
 
   // GET /api/customers/byname/:customer_name
   getCustomerByName: function(req, res) {
-    Customer.findOne({'CUSTOMER_ID': req.params.customer_name}, 'CUSTOMER_ID CUSTOMER_NAME PASSWORD EMAIL', function(err, customer){
+    Customer.findOne({'CUSTOMER_NAME': req.params.customer_name}, '', function(err, customer){
       if(err || ! customer) {
         res.sendStatus(404)
       } else {
