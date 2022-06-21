@@ -53,7 +53,7 @@ const customerController = {
       if(err) {
         res.sendStatus(500)
       } else {
-        res.status(200)
+        res.sendStatus(200)
       }
     })
   }
